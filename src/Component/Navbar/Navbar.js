@@ -13,14 +13,18 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Container } from '@mui/material';
 import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
+import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
+import EmailIcon from '@mui/icons-material/Email';
+import InputAdornment from '@mui/material/InputAdornment';
+import LockIcon from '@mui/icons-material/Lock';
 
-const drawerWidth = 240;
-const navItems = ['HOME','SERVICE', 'ABOUT US', 'CONTACT US'];
+const drawerWidth = '100%';
+const navItems = ['HOME', 'SERVICES', 'ABOUT US', 'CONTACT US'];
 
-function DrawerAppBar(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -49,42 +53,39 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            <Card sx={{ maxwidth: 100, ml: 0, border:'none'}}>
-              <CardMedia
-              component="img"
-              height="100"
-              image='/Assets/logo.png'
-              alt= ""/>
-            </Card>
-
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+    <>
+      <Box sx={{ display: 'flex', backgroundColor: '#ABCDCD', overflow: 'hidden' }}>
+        <CssBaseline />
+        <AppBar component="nav" elevation={0} sx={{ backgroundColor: '#ABCDCD' }}>
+          <Toolbar sx={{ justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' } }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ color: '#0B6869', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              >
+                SyncMedia Hub
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
+              {navItems.map((item) => (
+                <Button key={item} sx={{ color: '#000' }}>
+                  {item}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <nav>
         <Drawer
           container={container}
@@ -102,17 +103,11 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography>
-          
-        </Typography>
-      </Box>
-    </Box>
+    </>
   );
 }
 
-DrawerAppBar.propTypes = {
+Navbar.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -120,4 +115,4 @@ DrawerAppBar.propTypes = {
   window: PropTypes.func,
 };
 
-export default DrawerAppBar;
+export default Navbar;
