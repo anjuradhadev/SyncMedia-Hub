@@ -6,6 +6,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function LoginForm() {
@@ -22,7 +23,7 @@ function LoginForm() {
         <Box
           component="img"
           sx={{ width: '40%',objectFit:'contain' }}
-          src="/Assets/peoplesocial.png"
+          src="/Assets/undraw_login_re_4vu2 1.png"
           alt="Live from space album cover"
         />
 
@@ -33,13 +34,17 @@ function LoginForm() {
           <TextField label="Email ID" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350}} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
           <TextField label="Password"  type={showPassword ? 'text' : 'password'} fullWidth variant="outlined" sx={{ marginBottom: 3, width: 350}} InputProps={{ startAdornment: (<InputAdornment position='start'><LockIcon color='action' /> </InputAdornment>), endAdornment: (<InputAdornment position='end'> <IconButton onClick={togglePasswordVisibility} edge='end'> {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}</IconButton></InputAdornment>),}} />
           <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 13, fontSize: 16, fontWeight: 'bold', cursor: 'pointer' }}>
+            <Link to="/ForgotPassword" style={{ textDecoration: 'none', color: 'inherit' }}>
             Forgot password?
+            </Link>
           </Typography>
-          <Button variant="outlined" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,borderColor:'black'}}>
+          <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
             Login
           </Button>
           <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 7, fontSize: 16, fontWeight: 'bold', cursor: 'pointer' }}>
+           <Link to="/SignUp" style={{ textDecoration: 'none', color: 'inherit' }}> 
             Don't have an account? Sign Up
+            </Link> 
           </Typography>
         </Box>
       </Box>

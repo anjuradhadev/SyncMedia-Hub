@@ -1,11 +1,10 @@
+import React from 'react'
 import { Box, Stack } from '@mui/material';
-import React from 'react';
-import LoginForm from '../../Section/Auth/Login/LoginForm';
+import ContactForm from '../../Section/Contact/ContactForm'
 
-function Login() {
+function Contact() {
   return (
-    
-<Stack
+    <Stack
   direction="row"
   justifyContent="center"
   alignItems="center"
@@ -13,9 +12,9 @@ function Login() {
   sx={{height:"100vh", backgroundColor: '#ABCDCD', overflow:'hidden'}}
 >
 
-      <LoginForm />
+      <ContactForm />
     </Stack>
   )
 }
 
-export default Login
+export default Contact

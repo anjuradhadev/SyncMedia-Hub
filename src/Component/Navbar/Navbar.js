@@ -13,13 +13,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/material';
 import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import TextField from '@mui/material/TextField';
-import EmailIcon from '@mui/icons-material/Email';
-import InputAdornment from '@mui/material/InputAdornment';
-import LockIcon from '@mui/icons-material/Lock';
+
 
 const drawerWidth = '100%';
 const navItems = ['HOME', 'SERVICES', 'ABOUT US', 'CONTACT US'];
@@ -71,7 +66,7 @@ function Navbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: '#0B6869', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                sx={{ color: 'white', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
               >
                 SyncMedia Hub
               </Typography>
