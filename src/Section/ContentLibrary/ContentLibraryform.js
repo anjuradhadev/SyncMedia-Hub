@@ -13,7 +13,7 @@ function ContentLibraryform(){
     <Box >
 
     <Box >
-      <Typography variant='h4' sx={{marginLeft:17}}>CONTANT LIBRARY</Typography>
+      <Typography variant='h4' sx={{marginLeft:17}}>CONTENT LIBRARY</Typography>
     </Box>  
 
     <Box sx={{backgroundColor:'white', width:600, height:300, marginTop:5, borderRadius:2}}>
@@ -26,11 +26,13 @@ function ContentLibraryform(){
       </label>
       )}
       {selectedFile && (
-        <div >
+        <div style={{ height: '100%', overflow: 'hidden', position: 'relative' }}>
          <img
          src={URL.createObjectURL(selectedFile)}
          alt="Selected Image"
-         style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '2px' }}
+         style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '2px', position: 'absolute',
+         top: 0,
+         left: 0,}}
        />
         {/* <Typography variant="body1" sx={{ marginTop: '10px' }}>
           {selectedFile.name}
@@ -62,7 +64,7 @@ function ContentLibraryform(){
     <TextField label="Enter the description here" id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 600, backgroundColor:'white', borderRadius:1}} />
     </Box>
 
-    <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:25}}>
+    <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:26}}>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#0B6869','&:hover': {backgroundColor: '#0B6869',}}}>Draft</Button>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#0B6869','&:hover': {backgroundColor: '#0B6869',}}}>Upload</Button>
     </Box>
