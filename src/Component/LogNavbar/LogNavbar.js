@@ -15,12 +15,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const drawerWidth = '100%';
-const navItems = ['HOME', 'SERVICES', 'ABOUT US', 'CONTACT US'];
+const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTANT LIBRARY','CAMPAIGN'];
 
-function Navbar(props) {
+function LogNavbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -72,11 +73,11 @@ function Navbar(props) {
                 SyncMedia Hub
               </Typography>
             </Box>
-            <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
+            <Box sx={{ display: 'flex', gap: 7, paddingRight: 5 }}>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: '#000' }}>
                   {item === 'HOME' ? (
-                  <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to='/Loghome' style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Typography sx={{ fontWeight: 'medium' }}>
                   {item}
                   </Typography>
@@ -85,6 +86,9 @@ function Navbar(props) {
                     </Link>)} 
                 </Button>
               ))}
+              <IconButton color="inherit" component={Link} to="/account" style={{ textDecoration: 'none', color: 'black' }}>
+              <AccountCircleIcon />
+              </IconButton>
             </Box>
           </Toolbar>
         </AppBar>
@@ -110,7 +114,7 @@ function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
+LogNavbar.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -118,4 +122,4 @@ Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar;
+export default LogNavbar;

@@ -1,14 +1,8 @@
 import React from 'react'
-import { Box, Button, Card, CardMedia, Paper, TextField, Typography, IconButton } from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
-import InputAdornment from '@mui/material/InputAdornment';
-import LockIcon from '@mui/icons-material/Lock';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { useState } from 'react';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-function ContactForm() {
+function ContactUsForm() {
   return (
     // <Box >
 
@@ -29,7 +23,7 @@ function ContactForm() {
       <TextField label="Phone Number"  fullWidth multline rows={4} variant="outlined" sx={{ marginBottom: 3, width: 350}}  />
       <TextField label="Message" id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 350}} />
       <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
-      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}> 
+      <Link to="/Contact" style={{ textDecoration: 'none', color: 'inherit' }}> 
         Submit
       </Link>
       </Button>
@@ -39,4 +33,4 @@ function ContactForm() {
   )
 }
 
-export default ContactForm
+export default ContactUsForm

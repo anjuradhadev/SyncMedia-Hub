@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Card, CardMedia, Paper, TextField, Typography, IconButton } from '@mui/material';
+import { Box, Button, TextField, Typography, IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import InputAdornment from '@mui/material/InputAdornment';
 import LockIcon from '@mui/icons-material/Lock';
@@ -39,7 +39,9 @@ function LoginForm() {
             </Link>
           </Typography>
           <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
-            Login
+          <Link to="/Loghome" style={{ textDecoration: 'none', color: 'inherit'}}>
+           Login
+          </Link>    
           </Button>
           <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 7, fontSize: 16, fontWeight: 'bold', cursor: 'pointer' }}>
            <Link to="/SignUp" style={{ textDecoration: 'none', color: 'inherit' }}> 
