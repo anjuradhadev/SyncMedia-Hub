@@ -11,7 +11,14 @@ import ForgotPassword from './pages/Auth/ForgotPassword/ForgotPassword';
 import Verifyemail from './pages/Auth/Verifyemail';
 import ResetPassword from './pages/Auth/ResetPassword/ResetPassword';
 import Services from './pages/Services/Services';
+import ContactUs from './pages/ContactUs/ContactUs';
 import Contact from './pages/Contact/Contact';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Loghome from './pages/Loghome/Loghome';
+import Formcomplete from './pages/Formcomplete/Formcomplete';
+import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
+
+
 
 const router = createBrowserRouter([
   {
@@ -51,8 +58,28 @@ const router = createBrowserRouter([
     element: <Services/>,
   },
   {
+    path: "/ContactUs",
+    element: <ContactUs/>,
+  },
+  {
+    path: "/AboutUs",
+    element: <AboutUs/>,
+  },
+  {
+    path: "/Loghome",
+    element: <Loghome/>,
+  },
+  {
     path: "/Contact",
-    element: <Contact/>,
+    element:<Contact/>,
+  },
+  {
+    path: "/Formcomplete",
+    element:<Formcomplete/>,
+  },
+  {
+    path: "/ContentLibrary",
+    element:<ContentLibrary/>,
   },
 ]);
 
@@ -62,7 +89,7 @@ function App() {
     <RouterProvider router={router}>
       <Navbar />
       <Routes>
-        <Route path='/Frontpage' element={<FrontPage />}/>
+        <Route path='/' element={<FrontPage />}/>
         <Route path='/Login' element={<Login />}/>
         <Route path='/SignUp' element={<SignUp />}/>
         <Route path='/Emailverification' element={<Emailverification />}/>
@@ -71,7 +98,11 @@ function App() {
         <Route path='/Verifyemail' element={<Verifyemail/>}/>
         <Route path='/ResetPassword' element={<ResetPassword/>}/>
         <Route path='/Services' element={<Services/>}/>
+        <Route path='/ContactUs' element={<ContactUs/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/AboutUs' element={<AboutUs/>}/>
+        <Route path='/Loghome' element={<Loghome/>}/>
+        <Route path='/Formcomplete' element={<Formcomplete/>}/>
       </Routes>
     </RouterProvider>
   );

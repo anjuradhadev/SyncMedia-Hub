@@ -1,13 +1,8 @@
-import React,{useState} from 'react'
-import { Box, Button, Card, CardMedia, Paper, TextField, Typography,IconButton} from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
-import InputAdornment from '@mui/material/InputAdornment';
-import LockIcon from '@mui/icons-material/Lock';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import React from 'react'
+import { Box, Button, Typography} from '@mui/material';
 import { Link } from 'react-router-dom';
 
-function FrontpageForm() {
+function FrontPageForm() {
   return (
     <Box sx={{ display: 'flex',justifyContent:'space-around',gap: '3', backgroundColor: '#ABCDCD'}}>
     <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
@@ -32,4 +27,4 @@ function FrontpageForm() {
 
 }
 
-export default FrontpageForm
+export default FrontPageForm

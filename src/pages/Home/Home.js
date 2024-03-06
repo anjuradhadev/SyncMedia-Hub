@@ -10,7 +10,11 @@ import ForgotPassword from '../Auth/ForgotPassword/ForgotPassword'
 import Verifyemail from '../Auth/Verifyemail'
 import ResetPassword from '../Auth/ResetPassword/ResetPassword'
 import Services from '../Services/Services'
+import ContactUs from '../ContactUs/ContactUs'
+import AboutUs from '../AboutUs/AboutUs'
+import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
+import ContentLibrary from '../ContentLibrary/ContentLibrary'
 
 
 function Home() {
@@ -27,7 +31,11 @@ function Home() {
         <Verifyemail/>
         <ResetPassword/>
         <Services/>
+        <ContactUs/>
         <Contact/>
+        <AboutUs/>
+        <Loghome/>
+        <ContentLibrary/>
     </Box> 
   )
 }

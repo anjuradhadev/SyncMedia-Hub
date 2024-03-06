@@ -1,21 +1,20 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Navbar from '../../Component/Navbar/Navbar';
-import Contactpage from '../../Section/Contact/Contactpage';
+import Formcompletepage from '../../Section/Formcomplete/Formcompletepage';
 
-function Contact(){
+function Formcomplete() {
   return (
-      <Stack
+    
+    <Stack
         direction="row"
         justifyContent="center"
         alignItems="center"
         spacing={0}
         sx={{height:"100vh", backgroundColor: '#ABCDCD', overflow:'hidden'}}
       >
-          <Navbar/>
-          <Contactpage />
+          <Formcompletepage />
           </Stack>
   )
 }
 
-export default Contact
+export default Formcomplete

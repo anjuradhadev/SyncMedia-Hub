@@ -1,21 +1,19 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Navbar from '../../Component/Navbar/Navbar';
-import Contactpage from '../../Section/Contact/Contactpage';
+import ContentLibraryform from '../../Section/ContentLibrary/ContentLibraryform'
 
-function Contact(){
+function ContentLibrary(){
   return (
-      <Stack
+    <Stack
         direction="row"
         justifyContent="center"
         alignItems="center"
         spacing={0}
         sx={{height:"100vh", backgroundColor: '#ABCDCD', overflow:'hidden'}}
       >
-          <Navbar/>
-          <Contactpage />
+          <ContentLibraryform />
           </Stack>
   )
 }
 
-export default Contact
+export default ContentLibrary

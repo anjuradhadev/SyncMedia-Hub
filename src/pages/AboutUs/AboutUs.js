@@ -1,9 +1,9 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
 import Navbar from '../../Component/Navbar/Navbar';
-import FrontPageForm from '../../Section/FrontPage/FrontPageForm'
+import AboutUsForm from '../../Section/AboutUs/AboutUsForm';
 
-function FrontPage() {
+function AboutUs() {
   return (
     
 <Stack
@@ -15,9 +15,9 @@ function FrontPage() {
 >
 <Navbar/>
 
-      <FrontPageForm />
+      <AboutUsForm />
     </Stack>
   )
 }
 
-export default FrontPage
+export default AboutUs
