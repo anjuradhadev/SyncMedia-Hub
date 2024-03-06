@@ -22,7 +22,7 @@ the audience at optimal times.</Typography>
       <Box sx={{display:'flex',flexDirection:'column'}}>
         <Box         component="img"
           sx={{ width: '20%',objectFit:'contain',display:'flex',flexDirection:'column',marginTop:8,marginLeft:38 }}
-          src="/Assets/Content Calender.png"
+          src="/Assets/ContentCalender.png"
           alt=""/>
                     <Typography variant='h5' sx={{marginLeft:37,marginTop:1}}>Content Calender</Typography>
                     <Typography variant='h6' sx={{marginLeft:33,fontSize:18,marginTop:1}}>Content calendar that provides a<br></br> visual overview 
