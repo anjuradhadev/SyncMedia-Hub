@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
 import Navbar from '../../Component/Navbar/Navbar';
-import FrontpageForm from '../../Section/Frontpage/FrontpageForm'
+import FrontpageForm from '../../Section/FrontPage/FrontpageForm';
 
 function FrontPage() {
   return (

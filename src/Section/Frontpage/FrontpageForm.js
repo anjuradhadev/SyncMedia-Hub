@@ -32,4 +32,4 @@ function FrontpageForm() {
 
 }
 
-export default FrontpageForm
+export default  FrontpageForm
